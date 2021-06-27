@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Layout from "../containers/Layout";
+import SEO from "../components/SEO";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,8 +18,9 @@ export default function Donate() {
   const classes = useStyles();
 
   return (
-    <Layout>
-      <div className={classes.root}>Donate</div>
-    </Layout>
+    <div className={classes.root}>
+      <SEO title="Donate" />
+      Donate
+    </div>
   );
 }

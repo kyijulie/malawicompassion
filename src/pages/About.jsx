@@ -5,7 +5,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import Layout from "../containers/Layout";
+import SEO from "../components/SEO";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,28 +32,27 @@ Pastors Alfred and Kenneth work in the field to help their own natives in great 
 export default function About() {
   const classes = useStyles();
   return (
-    <Layout>
-      <div className={classes.root}>
-        <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              alt="Contemplative Reptile"
-              height="600"
-              image={process.env.REACT_APP_MALAWI_GROUP_PHOTO}
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                About Us
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {text}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </div>
-    </Layout>
+    <div className={classes.root}>
+      <SEO title="About" />
+      <Card className={classes.card}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            alt="Contemplative Reptile"
+            height="600"
+            image={process.env.REACT_APP_MALAWI_GROUP_PHOTO}
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              About Us
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              {text}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </div>
   );
 }

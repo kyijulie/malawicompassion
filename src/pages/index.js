@@ -13,12 +13,19 @@ import {
   firstHomeText,
   secondHomeText,
   thirdHomeText,
-} from "../components/text.jsx";
+} from "../static/homeText";
 import Divider from "@material-ui/core/Divider";
 import Footer from "../components/Footer";
-
-import Layout from "../containers/Layout";
-
+import SEO from "../components/SEO";
+import {
+  GATSBY_CAROUSEL_1,
+  GATSBY_CAROUSEL_2,
+  GATSBY_CAROUSEL_3,
+  GATSBY_CAROUSEL_4,
+  GATSBY_CAROUSEL_5,
+} from "../static/dropbox";
+// import * as dotenv from "dotenv";
+// dotenv.config();
 AOS.init();
 
 const useStyles = makeStyles((theme) => ({
@@ -78,87 +85,74 @@ function Home() {
     });
   }, []);
 
-  const {
-    REACT_APP_CAROUSEL_1,
-    REACT_APP_CAROUSEL_2,
-    REACT_APP_CAROUSEL_3,
-    REACT_APP_CAROUSEL_4,
-    REACT_APP_CAROUSEL_5,
-  } = process.env;
-
   return (
-    <Layout>
-      <div className={classes.root}>
-        <Container>
-          <img className={classes.carousel} src={REACT_APP_CAROUSEL_1} />
-        </Container>
-        <div data-aos="fade-in">
-          <SmallContainer
-            header="Mission Statement"
-            text="this is our mission statement"
-          />
-        </div>
-        <Grid
-          container
-          spacing={1}
-          className={classes.gridContainer}
-          alignItems="stretch"
-        >
-          <Grid data-aos="fade-down" item xs={5}>
-            <img className={classes.carousel} src={REACT_APP_CAROUSEL_3} />
-          </Grid>
-          <Grid data-aos="fade-up" item xs={7}>
-            <Typography className={classes.gridTable} variant="h4">
-              {firstHomeTitle}
-            </Typography>
-            <Typography className={classes.gridTable}>
-              {firstHomeText}
-            </Typography>
-          </Grid>
-        </Grid>
-        <Divider />
-        <Grid container spacing={6} className={classes.gridContainer}></Grid>
-        <Grid
-          container
-          spacing={1}
-          className={classes.gridContainer}
-          alignItems="stretch"
-        >
-          <Grid data-aos="fade-up" item xs={7}>
-            <Typography className={classes.gridTable} variant="h4">
-              {secondHomeTitle}
-            </Typography>
-            <Typography className={classes.gridTable}>
-              {secondHomeText}
-            </Typography>
-          </Grid>
-          <Grid data-aos="fade-down" item xs={5}>
-            <img className={classes.carousel} src={REACT_APP_CAROUSEL_2} />
-          </Grid>
-        </Grid>
-        <Divider />
-        <Grid container spacing={6} className={classes.gridContainer}></Grid>
-        <Grid
-          container
-          spacing={1}
-          className={classes.gridContainer}
-          alignItems="stretch"
-        >
-          <Grid data-aos="fade-down" item xs={5}>
-            <img className={classes.carousel} src={REACT_APP_CAROUSEL_5} />
-          </Grid>
-          <Grid data-aos="fade-up" item xs={7}>
-            <Typography className={classes.gridTable} variant="h4">
-              {thirdHomeTitle}
-            </Typography>
-            <Typography className={classes.gridTable}>
-              {thirdHomeText}
-            </Typography>
-          </Grid>
-        </Grid>
-        <Footer />
+    <div className={classes.root}>
+      <SEO title="Malawi Compassion" />
+      <Container>
+        <img className={classes.carousel} src={GATSBY_CAROUSEL_1} />
+      </Container>
+      <div data-aos="fade-in">
+        <SmallContainer
+          header="Mission Statement"
+          text="this is our mission statement"
+        />
       </div>
-    </Layout>
+      <Grid
+        container
+        spacing={1}
+        className={classes.gridContainer}
+        alignItems="stretch"
+      >
+        <Grid data-aos="fade-down" item xs={5}>
+          <img className={classes.carousel} src={GATSBY_CAROUSEL_3} />
+        </Grid>
+        <Grid data-aos="fade-up" item xs={7}>
+          <Typography className={classes.gridTable} variant="h4">
+            {firstHomeTitle}
+          </Typography>
+          <Typography className={classes.gridTable}>{firstHomeText}</Typography>
+        </Grid>
+      </Grid>
+      <Divider />
+      <Grid container spacing={6} className={classes.gridContainer}></Grid>
+      <Grid
+        container
+        spacing={1}
+        className={classes.gridContainer}
+        alignItems="stretch"
+      >
+        <Grid data-aos="fade-up" item xs={7}>
+          <Typography className={classes.gridTable} variant="h4">
+            {secondHomeTitle}
+          </Typography>
+          <Typography className={classes.gridTable}>
+            {secondHomeText}
+          </Typography>
+        </Grid>
+        <Grid data-aos="fade-down" item xs={5}>
+          <img className={classes.carousel} src={GATSBY_CAROUSEL_2} />
+        </Grid>
+      </Grid>
+      <Divider />
+      <Grid container spacing={6} className={classes.gridContainer}></Grid>
+      <Grid
+        container
+        spacing={1}
+        className={classes.gridContainer}
+        alignItems="stretch"
+      >
+        <Grid data-aos="fade-down" item xs={5}>
+          <img className={classes.carousel} src={GATSBY_CAROUSEL_5} />
+        </Grid>
+        <Grid data-aos="fade-up" item xs={7}>
+          <Typography className={classes.gridTable} variant="h4">
+            {thirdHomeTitle}
+          </Typography>
+          <Typography className={classes.gridTable}>{thirdHomeText}</Typography>
+        </Grid>
+      </Grid>
+      <Footer />
+    </div>
   );
 }
 

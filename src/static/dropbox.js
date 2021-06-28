@@ -1,0 +1,14 @@
+export const GATSBY_MALAWI_GROUP_PHOTO =
+  "https://www.dropbox.com/s/glrnro7y4gp6bpr/IMG_0698.jpg?raw=1";
+export const GATSBY_CAROUSEL_1 =
+  "https://www.dropbox.com/s/owphy5872blsh66/malawimain.gif?raw=1";
+export const GATSBY_CAROUSEL_2 =
+  "https://www.dropbox.com/s/5etdfqgbtrb0cfp/home2.jpeg?raw=1";
+export const GATSBY_CAROUSEL_3 =
+  "https://www.dropbox.com/s/k6x8kbxiqzfvs9c/20190222_080629240_iOS.jpg?raw=1";
+export const GATSBY_CAROUSEL_4 =
+  "https://www.dropbox.com/s/2rp5g5d1x49nguk/IMG_3090.JPG?raw=1";
+export const GATSBY_CAROUSEL_5 =
+  "https://www.dropbox.com/s/dxhzz4ifqpob017/IMG_3092.JPG?raw=1";
+export const GATSBY_CAROUSEL_6 =
+  "https://www.dropbox.com/s/w8rbopldbce75ds/IMG_3136.JPG?raw=1";

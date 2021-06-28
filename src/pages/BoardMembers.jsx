@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Layout from "../containers/Layout";
+import SEO from "../components/SEO";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,8 +18,9 @@ export default function BoardMembers() {
   const classes = useStyles();
 
   return (
-    <Layout>
-      <div className={classes.root}>BoardMembers</div>
-    </Layout>
+    <div className={classes.root}>
+      <SEO title="Board Members" />
+      BoardMembers
+    </div>
   );
 }

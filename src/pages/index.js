@@ -57,8 +57,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   gridContainer: {
-    paddingLeft: "325px",
-    paddingRight: "325px",
+    paddingLeft: "125px",
+    paddingRight: "125px",
     paddingBottom: "80px",
     paddingTop: "20px",
   },

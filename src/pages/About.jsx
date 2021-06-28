@@ -10,8 +10,8 @@ import Layout from "../containers/Layout";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    paddingLeft: "450px",
-    paddingRight: "450px",
+    paddingLeft: "125px",
+    paddingRight: "125px",
   },
   card: {
     flexDirection: "row",

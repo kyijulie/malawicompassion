@@ -11,8 +11,8 @@ import { GATSBY_MALAWI_GROUP_PHOTO } from "../static/dropbox";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    paddingLeft: "125px",
-    paddingRight: "125px",
+    paddingLeft: "200px",
+    paddingRight: "200px",
   },
   card: {
     flexDirection: "row",

@@ -1,23 +1,30 @@
 import React from "react";
+import AOS from "aos";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import SEO from "../components/SEO";
-import { GATSBY_MALAWI_GROUP_PHOTO } from "../static/dropbox";
+import { ABOUT_US_BANNER } from "../static/dropbox";
+import Footer from "../components/Footer";
+AOS.init();
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    paddingLeft: "200px",
-    paddingRight: "200px",
   },
   card: {
+    marginLeft: "150px",
+    marginRight: "150px",
     flexDirection: "row",
-    padding: "20px",
     margin: "50px",
+  },
+  banner: {
+    width: "100%",
+    height: "100%",
+    overflowY: "hidden",
+    paddingBottom: "50px",
   },
 }));
 
@@ -35,25 +42,17 @@ export default function About() {
   return (
     <div className={classes.root}>
       <SEO title="About" />
+      <img className={classes.banner} src={ABOUT_US_BANNER} />
       <Card className={classes.card}>
         <CardActionArea>
-          <CardMedia
-            component="img"
-            alt="Contemplative Reptile"
-            height="600"
-            image={GATSBY_MALAWI_GROUP_PHOTO}
-            title="Contemplative Reptile"
-          />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              About Us
-            </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               {text}
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf";
 // import pdf from "../../pdfs/shalomChristian.pdf";
+import { SHALOM_PDF } from "../../static/dropbox";
 
 function PdfView(file) {
   const [numPages, setNumPages] = useState(null);
@@ -12,10 +13,7 @@ function PdfView(file) {
 
   return (
     <div>
-      <Document
-        file="../../static/shalomChristian.pdf"
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
+      <Document file={SHALOM_PDF} onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} />
       </Document>
       <p>

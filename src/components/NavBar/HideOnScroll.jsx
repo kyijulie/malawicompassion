@@ -1,36 +1,8 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Slide from '@material-ui/core/Slide';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(1),
-  },
-  title: {
-    flexGrow: 1,
-    marginRight: 'auto'
-  },
-  navBarContainer: {
-    overflow: 'hidden',
-    backgroundColor: '#f1f1f1',
-    padding: '40px 10px',
-    transition: '0.4s',
-    position: 'fixed',
-    width: '100%',
-    top: '0',
-    zIndex: '99'
-  },
-  navBarFont: {
-
-  }
-}));
+import React from "react";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Slide from "@material-ui/core/Slide";
 
 function HideOnScroll(props) {
-  const classes = useStyles();
   const { children, window } = props;
   // todo: make navbar visible bigger height to smaller
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
@@ -42,4 +14,4 @@ function HideOnScroll(props) {
   );
 }
 
-export default HideOnScroll
+export default HideOnScroll;

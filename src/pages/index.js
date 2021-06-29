@@ -88,9 +88,7 @@ function Home() {
   return (
     <div className={classes.root}>
       <SEO title="Malawi Compassion" />
-      <Container>
-        <img className={classes.carousel} src={GATSBY_CAROUSEL_1} />
-      </Container>
+      <img className={classes.carousel} src={GATSBY_CAROUSEL_1} />
       <div data-aos="fade-in">
         <SmallContainer
           header="Mission Statement"

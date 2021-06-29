@@ -9,6 +9,8 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import SEO from "../components/SEO";
 import PdfView from "../components/PdfView";
+import { SHALOM_BANNER } from "../static/dropbox";
+import Footer from "../components/Footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,17 +28,25 @@ const useStyles = makeStyles((theme) => ({
     padding: "20px",
     margin: "50px",
   },
+  banner: {
+    width: "100%",
+    height: "100%",
+    overflowY: "hidden",
+    paddingBottom: "50px",
+  },
 }));
 
 // chisomo foundation
 // shalom christian center
 
-export default function News() {
+export default function ShalomChristianCenter() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <SEO title="News" />
+      <SEO title="Shalom Christian Center" />
+      <img className={classes.banner} src={SHALOM_BANNER} />
+
       <Card className={classes.card}>
         <CardActions>
           <Button size="small" color="primary">
@@ -46,19 +56,8 @@ export default function News() {
             Shalom Christian Center
           </Button>
         </CardActions>
-        <CardActionArea>
-          <CardContent>
-            <PdfView />
-            {/* <Typography gutterBottom variant="h5" component="h2">
-              Lizard
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography> */}
-          </CardContent>
-        </CardActionArea>
       </Card>
+      <Footer />
     </div>
   );
 }

@@ -9,12 +9,20 @@ import {
   PASTOR_KENNETH_VIDEO,
   PASTOR_KENNETH_CERT_1,
   PASTOR_KENNETH_CERT_2,
+  LEADERS_BANNER,
 } from "../static/dropbox";
 import VideoViewCard from "../components/VideoViewCard";
+import Footer from "../components/Footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+  },
+  banner: {
+    width: "100%",
+    height: "100%",
+    overflowY: "hidden",
+    paddingBottom: "50px",
   },
 }));
 
@@ -112,11 +120,14 @@ export default function MinistryLeaders() {
   return (
     <div>
       <SEO title="Ministry Leaders" />
+      <img className={classes.banner} src={LEADERS_BANNER} />
+
       <div className={classes.root}>
         {leaders.map((props) => (
           <VideoViewCard {...props} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

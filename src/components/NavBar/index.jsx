@@ -57,13 +57,20 @@ export default function NavBar() {
         />
         <Tab
           value={3}
-          label="news"
-          to="/News"
+          label="chisomo foundation"
+          to="/ChisomoFoundation"
           component={Link}
           className={classes.menuButton}
         />
         <Tab
           value={4}
+          label="shalom christian center"
+          to="/ShalomChristianCenter"
+          component={Link}
+          className={classes.menuButton}
+        />
+        <Tab
+          value={5}
           label="donate"
           to="/Donate"
           component={Link}

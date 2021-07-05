@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
   card: {
     flexDirection: "row",
     padding: "20px",
-    margin: "100px",
+    marginLeft: "100px",
+    marginRight: "100px",
   },
   banner: {
     width: "100%",

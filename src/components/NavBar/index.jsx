@@ -4,7 +4,6 @@ import AppBar from "@material-ui/core/AppBar";
 import { Link } from "gatsby";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import HideOnScroll from "./HideOnScroll";
 
 const useStyles = makeStyles((theme) => ({
   root: {

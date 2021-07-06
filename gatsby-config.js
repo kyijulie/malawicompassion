@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "malawicompassion",
+    title: "Malawi Compassion",
+    author: "@kyijulie",
+    siteUrl: "https://malawicompassion.com",
   },
   plugins: [
     "gatsby-plugin-image",

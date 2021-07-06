@@ -4,8 +4,8 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import SmallContainer from "../components/SmallContainer";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import {
   firstHomeTitle,
   secondHomeTitle,
@@ -26,7 +26,7 @@ import {
 } from "../static/dropbox";
 // import * as dotenv from "dotenv";
 // dotenv.config();
-AOS.init();
+// AOS.init();
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,17 +79,17 @@ const useStyles = makeStyles((theme) => ({
 function Home() {
   const classes = useStyles();
   const [spacing, setSpacing] = React.useState(2);
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 2000,
+  //   });
+  // }, []);
 
   return (
     <div className={classes.root}>
       <SEO title="Malawi Compassion" />
       <img className={classes.carousel} src={GATSBY_CAROUSEL_1} />
-      <div data-aos="fade-in">
+      <div>
         <SmallContainer
           header="Mission Statement"
           text="this is our mission statement"
@@ -101,10 +101,10 @@ function Home() {
         className={classes.gridContainer}
         alignItems="stretch"
       >
-        <Grid data-aos="fade-down" item xs={5}>
+        <Grid item xs={5}>
           <img className={classes.carousel} src={GATSBY_CAROUSEL_3} />
         </Grid>
-        <Grid data-aos="fade-up" item xs={7}>
+        <Grid item xs={7}>
           <Typography className={classes.gridTable} variant="h4">
             {firstHomeTitle}
           </Typography>
@@ -119,7 +119,7 @@ function Home() {
         className={classes.gridContainer}
         alignItems="stretch"
       >
-        <Grid data-aos="fade-up" item xs={7}>
+        <Grid item xs={7}>
           <Typography className={classes.gridTable} variant="h4">
             {secondHomeTitle}
           </Typography>
@@ -127,7 +127,7 @@ function Home() {
             {secondHomeText}
           </Typography>
         </Grid>
-        <Grid data-aos="fade-down" item xs={5}>
+        <Grid item xs={5}>
           <img className={classes.carousel} src={GATSBY_CAROUSEL_2} />
         </Grid>
       </Grid>
@@ -139,10 +139,10 @@ function Home() {
         className={classes.gridContainer}
         alignItems="stretch"
       >
-        <Grid data-aos="fade-down" item xs={5}>
+        <Grid item xs={5}>
           <img className={classes.carousel} src={GATSBY_CAROUSEL_5} />
         </Grid>
-        <Grid data-aos="fade-up" item xs={7}>
+        <Grid item xs={7}>
           <Typography className={classes.gridTable} variant="h4">
             {thirdHomeTitle}
           </Typography>

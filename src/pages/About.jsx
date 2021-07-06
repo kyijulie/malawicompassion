@@ -1,5 +1,5 @@
 import React from "react";
-import AOS from "aos";
+// import AOS from "aos";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import SEO from "../components/SEO";
 import { ABOUT_US_BANNER } from "../static/dropbox";
 import Footer from "../components/Footer";
-AOS.init();
+// AOS.init();
 
 const useStyles = makeStyles((theme) => ({
   root: {
